@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.DbContext;
 using WebApplication1.Models;
@@ -29,7 +31,22 @@ namespace WebApplication1.Service
 		public IEnumerable<Subcategory> GetAllSubcategories(int categoryId)
 		{
 			return _dbContext.Subcategories.Where(x =>  x.CategoryId == categoryId);
-		}		
+		}
 
+		public Excuse GetExcuseForParameters(ExcuseRequest request)
+		{
+			var excuses = _dbContext.Excuses
+				.Include(x => x.ExcuseKeywords)
+				.ThenInclude(x => x.Keyword)
+				.Where(x => x.SubcategoryId == request.SubcategoryId)
+				.Where(x => x.Tone == request.Tone)
+				.Where(x => !request.ExcludedExcuseIds.Contains(x.Id));
+
+				//Based on keyword-matches find the best fitting excuse. If excuses share the same score pick a random one.
+				excuses = excuses.OrderByDescending(x=> x.ExcuseKeywords.Count(y=>request.KeywordIds.Contains(y.Keyword.Id)))
+				.ThenBy(x=>Guid.NewGuid());  
+
+			return excuses.FirstOrDefault();
+		}
 	}
 }

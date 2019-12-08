@@ -6,9 +6,10 @@ namespace WebApplication1.Models
 	public class ExcuseRequest
 	{
 		//Validation
-		public Subcategory Subcategory { get; set; }
+		public int SubcategoryId { get; set; }
+		public List<int> ExcludedExcuseIds { get; set; }
 		public string Name { get; set; }
 		public Tone Tone { get; set; }
-		public List<Keyword> Keywords { get; set; }
+		public List<int> KeywordIds { get; set; }
 	}
 }
