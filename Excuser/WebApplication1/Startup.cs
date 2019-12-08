@@ -14,8 +14,9 @@ namespace WebApplication1
 		// For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
 		public void ConfigureServices(IServiceCollection services)
 		{
-			services.AddMvcCore().AddRazorViewEngine();
+			services.AddMvcCore().AddRazorViewEngine().AddJsonFormatters();
 			services.AddScoped<IKeywordService, KeywordService>();
+			services.AddScoped<IExcuseService, ExcuseService>();
 			services.AddScoped<ICategoryService, CategoryService>();
 			services.AddScoped<IStorageService, StorageService>();
 			services.AddScoped<ExcuserContex>();
