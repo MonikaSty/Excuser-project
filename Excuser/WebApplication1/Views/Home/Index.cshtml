@@ -1,4 +1,35 @@
-﻿@model IEnumerable<WebApplication1.Models.Category>
+﻿@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+@using WebApplication1.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model  IEnumerable<WebApplication1.Models.Category>
+<header>
+    <nav class="width">
+        <a href="index.html" class="logo" type="button">
+            Excuser
+        </a>
+        <button class="avatar"></button>
+    </nav>
+</header>
+<main>
+    <section class="hero">
+        <section class="hero--container width">
+            <h1>I was late 'cause my dog ate shit...</h1>
+            <p class="nomargin">Is this <span>really</span> your excuse? You can do better!</p>
+            <a href="#categories" class="button rounded margintop zfix">Create excuse</a>
+        </section>
+    </section>
+    <section class="categories width" id="categories">
+        <h2>Step up your excuse game</h2>
+        <p class="nomargin">with only two more clicks!</p>
+        <section class="categories--container">
+            @foreach (Category category in Model)
+            {
+                <a class="category @category.Name.ToLower()" asp-controller="CustomizeForm" asp-action="Index" asp-route-categoryId="@category.Id"><span class="rounded">@category.Name</span></a>
+            }
+        </section>
+    </section>
+</main>
 
-<h1>Home page</h1>
 

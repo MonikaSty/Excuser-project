@@ -1,5 +1,91 @@
-﻿
-@{
-    Layout = null;
-}
-@model WebApplication1.Models.CustomizeFormRequest
+﻿@using WebApplication1.Models
+@model ExcuseRequest
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="Styles/css/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@ViewBag.CategoryName | Excuser</title>
+</head>
+<body class="yellow">
+    <header>
+        <nav class="width">
+            <a href="index.html" class="logo" type="button">
+                Excuser
+            </a>
+            <button class="avatar"></button>
+        </nav>
+    </header>
+
+    <form asp-controller="CustomizeForm" asp-action="PostForm" method="post">
+        <section class="top width">
+            <a href="index.html" class="back">Back</a>
+            <h2>Cook your excuse for @ViewBag.CategoryName</h2>
+        </section>
+        <section class="two-container width">
+            <section class="small">
+                <div class="input-box">
+                    <label for="subcategory">
+                        Select the subcategory
+                    </label>
+                    <select id="subcategoryId" required asp-for="SubcategoryId">
+                        <option selected="selected" disabled="disabled">Select</option>
+                        @foreach (Subcategory sub in ViewBag.Subcategories)
+                        {
+                            <option value="@sub.Id">@sub.Name</option>
+                        }
+                    </select>
+                </div>
+                <div class="input-box margintop">
+                    <label asp-for="Name">
+                        Who is it for? <span>- optional</span>
+                    </label>
+                    <input id="person" asp-for="Name" placeholder="try John...">
+                </div>
+                <div class="input-box2 margintop">
+                    <label for="sliderTone">
+                        Select the tone of your excuse
+                    </label>
+                    <div class="slidecontainer">
+                        <input type="hidden" asp-for="KeywordIds" />
+                        <input type="range" min="0" max="1" value="0" class="slider" asp-for="Tone">
+                        <p>
+                            @foreach (string tone in ViewBag.Tones)
+                            {
+                                <span>@tone</span>
+                            }
+
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="big">
+                <div class="input-box">
+                    <label for="tags">
+                        Describe your situation with keywords
+                    </label>
+                    <div class="tag-box" id="tagBox"><input type="text" id="tagsInput" class="not" placeholder='Separate by "space"' list="availableKeywords"></div>
+                    <datalist id="availableKeywords">
+                        @foreach (Keyword keyword in ViewBag.Keywords)
+                        {
+                            <option value="@keyword.Value" data-id="@keyword.Id" />
+                        }
+
+                    </datalist>
+                    <!-- <textarea id="tags" placeholder='Separate by "space"'></textarea> -->
+                </div>
+                <p>Please really do separate by space and check for typos. For the list of keywords we work with, check this.</p>
+            </section>
+        </section>
+        <section class="button-right width">
+            <input type="submit" id="formButton" class="button rounded margintop" value="Excuse me?!" />
+        </section>
+    </form>
+    <script src="Scripts/form.js"></script>
+</body>
+</html>

@@ -21,5 +21,10 @@ namespace WebApplication1.Service
 		{
 			return _storageService.GetAllSubcategories(categoryId);
 		}
+
+		public string GetCatgoryName(int id)
+		{
+			return _storageService.GetCategoryName(id);
+		}
 	}
 }

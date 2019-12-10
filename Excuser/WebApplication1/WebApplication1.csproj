@@ -5,7 +5,43 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\Img\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Img\coffee-bg.jpg" />
+    <None Include="wwwroot\Img\edit\friends-bg-form.png" />
+    <None Include="wwwroot\Img\edit\newcoffee-bg-clear.png" />
+    <None Include="wwwroot\Img\edit\newcoffee-bg.jpg" />
+    <None Include="wwwroot\Img\edit\newevent-bg-clear.png" />
+    <None Include="wwwroot\Img\edit\newevent-bg.jpg" />
+    <None Include="wwwroot\Img\edit\newfriends-clear.png" />
+    <None Include="wwwroot\Img\edit\newfriends.jpg" />
+    <None Include="wwwroot\Img\edit\newschool-bg-clear.png" />
+    <None Include="wwwroot\Img\edit\newschool-bg.jpg" />
+    <None Include="wwwroot\Img\event-bg.jpg" />
+    <None Include="wwwroot\Img\friends.jpg" />
+    <None Include="wwwroot\Img\ic\arrow-down.svg" />
+    <None Include="wwwroot\Img\ic\arrow-left.svg" />
+    <None Include="wwwroot\Img\ic\avatar.jpg" />
+    <None Include="wwwroot\Img\ic\avatar.svg" />
+    <None Include="wwwroot\Img\ic\clipboard.svg" />
+    <None Include="wwwroot\Img\ic\edit.svg" />
+    <None Include="wwwroot\Img\ic\mail.svg" />
+    <None Include="wwwroot\Img\ic\plus.svg" />
+    <None Include="wwwroot\Img\ic\rotate.svg" />
+    <None Include="wwwroot\Img\ic\user.svg" />
+    <None Include="wwwroot\Img\school-bg.jpg" />
+    <None Include="wwwroot\Img\__MACOSX\edit\._friends-bg-form.png" />
+    <None Include="wwwroot\Img\__MACOSX\edit\._newcoffee-bg-clear.png" />
+    <None Include="wwwroot\Img\__MACOSX\edit\._newcoffee-bg.jpg" />
+    <None Include="wwwroot\Img\__MACOSX\edit\._newevent-bg-clear.png" />
+    <None Include="wwwroot\Img\__MACOSX\edit\._newevent-bg.jpg" />
+    <None Include="wwwroot\Img\__MACOSX\edit\._newfriends-clear.png" />
+    <None Include="wwwroot\Img\__MACOSX\edit\._newfriends.jpg" />
+    <None Include="wwwroot\Img\__MACOSX\edit\._newschool-bg-clear.png" />
+    <None Include="wwwroot\Img\__MACOSX\edit\._newschool-bg.jpg" />
+    <None Include="wwwroot\Styles\css\style.css" />
   </ItemGroup>
 
   <ItemGroup>
@@ -13,6 +49,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.6" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+    <PackageReference Include="Node.js" Version="5.3.0" />
   </ItemGroup>
 
 </Project>

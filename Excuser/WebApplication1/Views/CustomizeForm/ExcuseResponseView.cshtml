@@ -1,6 +1,51 @@
 ﻿@model WebApplication1.Models.ExcuseResponse
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/Styles/css/style.css" rel="stylesheet" />
+    <title>%Result | Excuser</title>
+</head>
+<body class="yellow">
+<header>
+    <nav class="width">
+        <a href="/home/index" class="logo" type="button">
+            Excuser
+        </a>
+        <button class="avatar"></button>
+    </nav>
+</header>
+<main>
+    <section class="top width">
+        <a href="/CustomizeForm/Index" class="back">Back</a>
+        @if (string.IsNullOrEmpty(Model.Name))
+        {
+            <h2>Finish up excuse</h2>
+        }
+        else
+        {
+            <h2>Finish up excuse for @Model.Name</h2>
+        }
+       <p>Click on words to see suggestions!</p>
+    </section>
 
-<h1>ID: @Model.Id</h1>
-<h1>Name: @Model.Name</h1>
-<h1>@Model.Body</h1>
+    <section class="two-container width">
+        <section class="big">
+            <div id="resultText" class="rounded">@Model.Body</div>
+        </section>
+            
+        <section class="small">
+            <a class="button rounded left-align noedit" onclick="copyToClipboard()"><span class="icon copy"></span>Copy to clipboard</a>
+            <a class="button rounded left-align margintop-1 white noedit" onclick="sendEmail()"><span class="icon email"></span>Send as an email</a>
+            <a class="button rounded left-align margintop-1 white noedit"><span class="icon new"></span>Generate new one</a>
+            <a class="button rounded left-align margintop-1 white noedit" href="/home/index"><span class="icon start"></span>Start over</a>
+        </section>
+    </section>
+</main>
 
+<script src="/Scripts/result.js"></script>
+             
+</body>
+</html>
