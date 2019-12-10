@@ -1,17 +1,12 @@
 ﻿@{
     Layout = "~/Views/Shared/Layout.cshtml";
+    ViewBag.Title = "Homepage";
+    ViewBag.Yellow = false;
 }
 @using WebApplication1.Models
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @model  IEnumerable<WebApplication1.Models.Category>
-<header>
-    <nav class="width">
-        <a href="index.html" class="logo" type="button">
-            Excuser
-        </a>
-        <button class="avatar"></button>
-    </nav>
-</header>
+
 <main>
     <section class="hero">
         <section class="hero--container width">

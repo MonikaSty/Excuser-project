@@ -1,30 +1,16 @@
 ﻿@using WebApplication1.Models
 @model ExcuseRequest
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href="Styles/css/style.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@ViewBag.CategoryName | Excuser</title>
-</head>
-<body class="yellow">
-    <header>
-        <nav class="width">
-            <a href="index.html" class="logo" type="button">
-                Excuser
-            </a>
-            <button class="avatar"></button>
-        </nav>
-    </header>
-
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+    ViewBag.Title = ViewBag.CategoryName;
+    ViewBag.Yellow = true;
+}
+<main>
     <form asp-controller="CustomizeForm" asp-action="PostForm" method="post">
         <section class="top width">
-            <a href="index.html" class="back">Back</a>
-            <h2>Cook your excuse for @ViewBag.CategoryName</h2>
+            <a href="/" class="back">Back</a>
+            <h2>Cook your excuse for @ViewBag.CategoryName.ToString().ToLower()</h2>
         </section>
         <section class="two-container width">
             <section class="small">
@@ -86,6 +72,9 @@
             <input type="submit" id="formButton" class="button rounded margintop" value="Excuse me?!" />
         </section>
     </form>
-    <script src="Scripts/form.js"></script>
-</body>
-</html>
+</main>
+<script src="/Scripts/form.js"></script>
+<script>
+    localStorage.removeItem("category")
+    localStorage.setItem("category", "@ViewBag.CategoryName")
+</script>
