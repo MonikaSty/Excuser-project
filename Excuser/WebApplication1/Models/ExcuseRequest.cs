@@ -8,8 +8,8 @@ namespace WebApplication1.Models
 	{
 		[Required]
 		public int SubcategoryId { get; set; }
-		public List<int> ExcludedExcuseIds { get; set; }
-		[StringLength(15, ErrorMessage = "Name length can't be more than 20 characters.")]
+		public List<int> ExcludedExcuseIds { get; set; } = new List<int>();
+		[StringLength(15, ErrorMessage = "Name length can't be more than 15 characters.")]
 		public string Name { get; set; }
 		[Required]
 		public Tone Tone { get; set; }

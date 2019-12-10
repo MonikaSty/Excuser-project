@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Infrastrcuture.Utils;
@@ -20,19 +22,20 @@ namespace WebApplication1.Controllers
 			_excuseService = excuseService;
 		}
 		
-		public IActionResult Index(int categoryId)
+		public IActionResult Index(int categoryId = 4)
 		{
-			var subcategories = _categoryService.GetAllSubcategories(categoryId).ToList();
-			var keywords = _keywordService.GetAllKeywords().ToList();
-			var tones = Enum.GetNames(typeof(Tone)).ToList();
-			return View(new CustomizeFormRequest(subcategories, keywords, tones));
+			ViewBag.Subcategories = _categoryService.GetAllSubcategories(categoryId).ToList();
+			ViewBag.Keywords = _keywordService.GetAllKeywords().ToList();
+			ViewBag.Tones = Enum.GetNames(typeof(Tone)).ToList();
+			ViewBag.CategoryName = _categoryService.GetCatgoryName(categoryId);
+			return View();
 		}
 
 		[HttpPost]
-		public IActionResult PostFrom([FromBody]ExcuseRequest request)
+		public IActionResult PostForm(ExcuseRequest request)
 		{
-			if(!ModelState.IsValid)
-				return new StatusCodeResult(500);
+			//if (!ModelState.IsValid)
+			//	return new StatusCodeResult(500);
 
 			var response = _excuseService.GetMatchingExcuseOrDefault(request);
 			return View("ExcuseResponseView", response);

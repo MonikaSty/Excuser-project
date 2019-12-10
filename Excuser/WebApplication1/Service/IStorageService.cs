@@ -10,5 +10,6 @@ namespace WebApplication1.Service
 		IEnumerable<Subcategory> GetAllSubcategories(int categoryId);
 		IEnumerable<Category> GetAllCategories();
 		Excuse GetExcuseForParameters(ExcuseRequest request);
+		string GetCategoryName(int id); 
 	}
 }

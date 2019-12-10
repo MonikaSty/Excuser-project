@@ -20,6 +20,12 @@ namespace WebApplication1.Service
 		{
 			return _dbContext.Keywords;
 		}
+
+		public string GetCategoryName(int id)
+		{
+			var category = _dbContext.Categories.SingleOrDefault(x => x.Id == id);
+			return category != null ? category.Name : "category not found";
+		}
 		public IEnumerable<Category> GetAllCategories()
 		{
 			return _dbContext.Categories;
@@ -42,8 +48,8 @@ namespace WebApplication1.Service
 				.Where(x => x.Tone == request.Tone)
 				.Where(x => !request.ExcludedExcuseIds.Contains(x.Id));
 
-				//Based on keyword-matches find the best fitting excuse. If excuses share the same score pick a random one.
-				excuses = excuses.OrderByDescending(x=> x.ExcuseKeywords.Count(y=>request.KeywordIds.Contains(y.Keyword.Id)))
+			//Based on keyword-matches find the best fitting excuse. If excuses share the same score pick a random one.
+			excuses = excuses.OrderByDescending(x=> x.ExcuseKeywords.Count(y=>request.KeywordIds.Contains(y.Keyword.Id)))
 				.ThenBy(x=>Guid.NewGuid());  
 
 			return excuses.FirstOrDefault();
