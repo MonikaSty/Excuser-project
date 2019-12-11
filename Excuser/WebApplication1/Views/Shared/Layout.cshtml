@@ -1,8 +1,22 @@
-﻿<head>
-    <link href="Styles/css/style.css" rel="stylesheet" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    @RenderBody()
-</body>
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="/Styles/css/style.css" rel="stylesheet" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>@ViewBag.Title | Excuser</title>
+    </head>
+    <body class="@ViewBag.Title.ToString().ToLower() @if (ViewBag.Yellow == true) { @(" yellow") }">
+        <header>
+            <nav class="width">
+                <a href="/" class="logo" type="button">
+                    Excuser
+                </a>
+                <button class="avatar"></button>
+            </nav>
+        </header>
+
+        @RenderBody()
+    </body>
+</html>

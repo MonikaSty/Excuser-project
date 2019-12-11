@@ -84,14 +84,29 @@ body {
     font-family: 'Glacial', sans-serif
 }
 
-    body.yellow {
-        background-image: linear-gradient(90deg, #FFDD65 0%, rgba(255, 221, 101, 0.5) 71.08%), url(/Img/edit/friends-bg-form.png);
-        background-color: var(--yellow);
-        background-position: right center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        min-height: 100vh
-    }
+body.yellow {
+    background-color: var(--yellow);
+    background-position: right -160px center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 100vh
+}
+
+body.yellow.friends {
+    background-image: linear-gradient(90deg, #FFDD65 0%, rgba(255, 221, 101, 0.5) 71.08%), url(/Img/edit/newfriends-clear.png);
+}
+
+body.yellow.work {
+    background-image: linear-gradient(90deg, #FFDD65 0%, rgba(255, 221, 101, 0.5) 71.08%), url(/Img/edit/newcoffee-bg-clear.png);
+}
+
+body.yellow.events {
+    background-image: linear-gradient(90deg, #FFDD65 0%, rgba(255, 221, 101, 0.5) 71.08%), url(/Img/edit/newevent-bg-clear.png);
+}
+
+body.yellow.school {
+    background-image: linear-gradient(90deg, #FFDD65 0%, rgba(255, 221, 101, 0.5) 71.08%), url(/Img/edit/newschool-bg-clear.png);
+}
 
 @media (max-width: 750px) {
     body {
@@ -142,7 +157,7 @@ p, a {
 }
 
 .button {
-    background: var(--red)!important;
+    background-color: var(--red);
     padding: 1rem;
     display: inline-block;
     text-decoration: none;
@@ -452,7 +467,8 @@ nav {
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.category:nth-child(odd)::after {
+.category.friends::after,
+.category.school::after{
     background: var(--green);
 }
 
@@ -471,21 +487,49 @@ nav {
     }
 
 
+/* CAT container pos */
+
+.categories--container .category.friends {
+    order: 1
+}
+
+.categories--container .category.work {
+    order: 2
+}
+
+.categories--container .category.school {
+    order: 3
+}
+
+.categories--container .category.events {
+    order: 4
+}
+
 
 /*#endregion*/
 
 /*#region INPUTS */
 
+input {
+    outline: none
+}
+
 input:not([type="range"]):not(.not),
 select,
 textarea,
 .tag-box {
-    background: #FFF;
     border-radius: var(--border-radius);
     padding: 1rem;
     border: 0;
     font-size: var(--sizep);
     font-family: 'Glacial', sans-serif;
+}
+
+input:not([type="range"]):not(.not):not(.button),
+select,
+textarea,
+.tag-box {
+    background: #FFF;
 }
 
 .tag-box {
@@ -498,6 +542,11 @@ input.not {
     font-size: 18px;
     font-family: 'Glacial', sans-serif;
 }
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
 
 select {
     -moz-appearance: none; /* Firefox */

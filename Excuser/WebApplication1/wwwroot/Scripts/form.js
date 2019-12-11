@@ -34,7 +34,7 @@ tagInput.addEventListener("keyup", function (e) {
         let check = keywAr.find(task => task.value === value)
 
         // check if the tag is unique
-        if (tagArray.indexOf(value) === -1 && value !== "" && check) {
+        if (tagArray.indexOf(check.id) === -1 && value !== "" && check) {
             tagArray.push(check.id);
 
             // create Tag element

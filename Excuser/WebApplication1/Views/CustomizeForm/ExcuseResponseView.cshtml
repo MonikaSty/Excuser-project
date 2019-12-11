@@ -1,22 +1,10 @@
 ﻿@model WebApplication1.Models.ExcuseResponse
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="/Styles/css/style.css" rel="stylesheet" />
-    <title>%Result | Excuser</title>
-</head>
-<body class="yellow">
-<header>
-    <nav class="width">
-        <a href="/home/index" class="logo" type="button">
-            Excuser
-        </a>
-        <button class="avatar"></button>
-    </nav>
-</header>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+    ViewBag.Title = "Excuse";
+    ViewBag.Yellow = true;
+}
 <main>
     <section class="top width">
         <a href="/CustomizeForm/Index" class="back">Back</a>
@@ -46,6 +34,7 @@
 </main>
 
 <script src="/Scripts/result.js"></script>
-             
-</body>
-</html>
+<script>
+    const cat = localStorage.getItem("category").toLowerCase()
+    document.getElementsByTagName("BODY")[0].classList.add(cat)
+</script>
