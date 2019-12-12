@@ -586,11 +586,11 @@ namespace WebApplication1.DbContext
                 }, new ExcuseKeyword
                 {
                     ExcuseId = 39,
-                    KeywordId = 38
+                    KeywordId = 34
                 }, new ExcuseKeyword
                 {
                     ExcuseId = 39,
-                    KeywordId = 39
+                    KeywordId = 31
                 }, new ExcuseKeyword
                 {
                     ExcuseId = 40,
@@ -598,37 +598,37 @@ namespace WebApplication1.DbContext
                 }, new ExcuseKeyword
                 {
                     ExcuseId = 40,
-                    KeywordId = 38
+                    KeywordId = 34
                 }, new ExcuseKeyword
                 {
                     ExcuseId = 40,
-                    KeywordId = 39
+                    KeywordId = 31
                 },
                 //New Addition: 41,42
                 new ExcuseKeyword
                 {
                     ExcuseId = 41,
-                    KeywordId = 39
+                    KeywordId = 22
                 }, new ExcuseKeyword
                 {
                     ExcuseId = 41,
-                    KeywordId = 40
+                    KeywordId = 17
                 }, new ExcuseKeyword
                 {
                     ExcuseId = 41,
-                    KeywordId = 41
+                    KeywordId = 5
                 }, new ExcuseKeyword
                 {
                     ExcuseId = 42,
-                    KeywordId = 39
+                    KeywordId = 22
                 }, new ExcuseKeyword
                 {
                     ExcuseId = 42,
-                    KeywordId = 40
+                    KeywordId = 17
                 }, new ExcuseKeyword
                 {
                     ExcuseId = 42,
-                    KeywordId = 41
+                    KeywordId = 5
                 },
                 //New Addition: 43,44
                 new ExcuseKeyword
