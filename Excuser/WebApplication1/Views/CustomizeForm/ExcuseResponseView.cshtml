@@ -1,5 +1,4 @@
-﻿@model WebApplication1.Models.ExcuseResponse
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     Layout = "~/Views/Shared/Layout.cshtml";
     ViewBag.Title = "Excuse";
@@ -8,26 +7,26 @@
 <main>
     <section class="top width">
         <a href="/CustomizeForm/Index" class="back">Back</a>
-        @if (string.IsNullOrEmpty(Model.Name))
+        @if (string.IsNullOrEmpty(ViewBag.Name))
         {
             <h2>Finish up excuse</h2>
         }
         else
         {
-            <h2>Finish up excuse for @Model.Name</h2>
+            <h2>Finish up excuse for @ViewBag.Name</h2>
         }
        <p>Click on words to see suggestions!</p>
     </section>
 
     <section class="two-container width">
         <section class="big">
-            <div id="resultText" class="rounded">@Model.Body</div>
+            <div id="resultText" class="rounded">@ViewBag.Body</div>
         </section>
             
         <section class="small">
             <a class="button rounded left-align noedit" onclick="copyToClipboard()"><span class="icon copy"></span>Copy to clipboard</a>
             <a class="button rounded left-align margintop-1 white noedit" onclick="sendEmail()"><span class="icon email"></span>Send as an email</a>
-            <a class="button rounded left-align margintop-1 white noedit"><span class="icon new"></span>Generate new one</a>
+            <a class="button rounded left-align margintop-1 white noedit" onclick="GenerateAnotherExcuse(@ViewBag.Id)"><span class="icon new"></span>Generate new one</a>
             <a class="button rounded left-align margintop-1 white noedit" href="/home/index"><span class="icon start"></span>Start over</a>
         </section>
     </section>

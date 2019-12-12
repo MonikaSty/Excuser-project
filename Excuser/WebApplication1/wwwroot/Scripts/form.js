@@ -123,3 +123,20 @@ function getListOfKeywords() {
     }
 }
 getListOfKeywords()
+
+document.querySelector('form').addEventListener('submit',
+    (e) => {
+        const subcategoryId = document.getElementById('subcategoryId').value; 
+        const name = document.getElementById('person').value; 
+        const keywordsIds = document.getElementById('KeywordIds').value; 
+        const tone = document.getElementById('Tone').value;
+        const object = {
+            SubcategoryId: subcategoryId, 
+            Name: name, 
+            KeywordsIds: keywordsIds, 
+            Tone: tone,
+            ExcludedExcuseIds: []
+        }
+        sessionStorage.setItem('ExcuseRequest', JSON.stringify(object));
+    });
+

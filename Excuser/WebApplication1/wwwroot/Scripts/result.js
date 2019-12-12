@@ -229,3 +229,28 @@ function copyToClipboard() {
     alert("Excuse copied to clipboard!")
 
 }
+
+function GenerateAnotherExcuse(Id) {
+    const request = JSON.parse(sessionStorage.getItem("ExcuseRequest"));
+    if (Id !== undefined) {
+         
+        request.ExcludedExcuseIds.push(Id);
+    }
+   const toStore = JSON.stringify(request)
+    sessionStorage.setItem("ExcuseRequest", toStore)
+    fetch('/CustomizeForm/GenerateForm/',
+        {
+            method: 'post',
+            headers: { 'content-type': 'application/json' },
+            body: toStore
+        }).then(response => {
+        return response.text(); 
+        }).then(function(html) {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, "text/html");
+            const pageMain = document.querySelector("main");
+            const returnedMain = doc.querySelector("main");
+            pageMain.innerHTML = returnedMain.innerHTML; 
+             
+    });
+}
