@@ -11,7 +11,7 @@ namespace WebApplication1.Controllers
 {
 	public class CustomizeFormController : Controller
 	{
-		private readonly ICategoryService _categoryService; 
+		private readonly ICategoryService _categoryService;
 		private readonly IKeywordService _keywordService;
 		private readonly IExcuseService _excuseService;
 
@@ -21,7 +21,7 @@ namespace WebApplication1.Controllers
 			_keywordService = keywordService;
 			_excuseService = excuseService;
 		}
-		
+
 		public IActionResult Index(int categoryId = 4)
 		{
 			ViewBag.Subcategories = _categoryService.GetAllSubcategories(categoryId).ToList();
@@ -30,15 +30,26 @@ namespace WebApplication1.Controllers
 			ViewBag.CategoryName = _categoryService.GetCatgoryName(categoryId);
 			return View();
 		}
-
+		[Route("/CustomizeForm/PostForm/")]
 		[HttpPost]
 		public IActionResult PostForm(ExcuseRequest request)
 		{
-			//if (!ModelState.IsValid)
-			//	return new StatusCodeResult(500);
+			var excuse = _excuseService.GetMatchingExcuseOrDefault(request);
+			ViewBag.Id = excuse.Id;
+			ViewBag.Name = excuse.Name;
+			ViewBag.Body = excuse.Body;
+			return View("ExcuseResponseView");
+		}
 
-			var response = _excuseService.GetMatchingExcuseOrDefault(request);
-			return View("ExcuseResponseView", response);
+		[Route("/CustomizeForm/GenerateForm/")]
+		[HttpPost]
+		public IActionResult GenerateForm([FromBody] ExcuseRequest request)
+		{	
+			var excuse = _excuseService.GetMatchingExcuseOrDefault(request);
+			ViewBag.Id = excuse.Id;
+			ViewBag.Name = excuse.Name;
+			ViewBag.Body = excuse.Body;
+			return View("ExcuseResponseView");
 		}
 	}
 }

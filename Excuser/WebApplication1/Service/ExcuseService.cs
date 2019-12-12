@@ -15,6 +15,7 @@ namespace WebApplication1.Service
 
 		public ExcuseResponse GetMatchingExcuseOrDefault(ExcuseRequest request)
 		{
+			if (request.KeywordIds == null) request.KeywordIds = new List<int>();
 			var excuse = _storageService.GetExcuseForParameters(request);
 			return GenerateExcuseResponseOrDefault(excuse, request.Name);
 		}
