@@ -18,9 +18,8 @@
                     <label for="subcategory">
                         Select the subcategory
                     </label>
-                    <select id="subcategoryId" required asp-for="SubcategoryId">
-                        <option selected="selected" disabled="disabled">Select</option>
-                        @foreach (Subcategory sub in ViewBag.Subcategories)
+                    <select id="subcategoryId" required="" asp-for="SubcategoryId">
+                     @foreach (Subcategory sub in ViewBag.Subcategories)
                         {
                             <option value="@sub.Id">@sub.Name</option>
                         }
@@ -30,7 +29,7 @@
                     <label asp-for="Name">
                         Who is it for? <span>- optional</span>
                     </label>
-                    <input id="person" asp-for="Name" placeholder="try John...">
+                    <input id="person" asp-for="Name" placeholder="try John..." maxlength="15">
                 </div>
                 <div class="input-box2 margintop">
                     <label for="sliderTone">

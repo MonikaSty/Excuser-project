@@ -9,8 +9,8 @@ using WebApplication1.DbContext;
 namespace WebApplication1.Migrations
 {
     [DbContext(typeof(ExcuserContex))]
-    [Migration("20191212175549_SeedMigration")]
-    partial class SeedMigration
+    [Migration("20191213093153_initial-data-seeding")]
+    partial class initialdataseeding
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

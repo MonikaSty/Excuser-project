@@ -87,576 +87,7 @@ namespace WebApplication1.DbContext
 				new Subcategory { Id = 5, Name = "Not feeling like it ", CategoryId = 4 },
 				new Subcategory { Id = 6, Name = "Physical ", CategoryId = 4 });
 
-			modelBuilder.Entity<ExcuseKeyword>().HasData(
-				new ExcuseKeyword
-				{
-					ExcuseId = 1,
-					KeywordId = 1
-				}, new ExcuseKeyword
-				{
-					ExcuseId = 2,
-					KeywordId = 1
-				}, new ExcuseKeyword
-				{
-					ExcuseId = 1,
-					KeywordId = 2
-				}, new ExcuseKeyword
-				{
-					ExcuseId = 2,
-					KeywordId = 2
-				}, new ExcuseKeyword
-				{
-					ExcuseId = 3,
-					KeywordId = 2
-				}, new ExcuseKeyword
-				{
-					ExcuseId = 4,
-					KeywordId = 2
-				}, new ExcuseKeyword
-				{
-					ExcuseId = 5,
-					KeywordId = 2
-				}, new ExcuseKeyword
-				{
-					ExcuseId = 6,
-					KeywordId = 2
-				}, new ExcuseKeyword
-				{
-					ExcuseId = 1,
-					KeywordId = 3
-				}, new ExcuseKeyword
-				{
-					ExcuseId = 2,
-					KeywordId = 3
-				}, new ExcuseKeyword
-				{
-					ExcuseId = 3,
-					KeywordId = 4
-				}, new ExcuseKeyword
-				{
-					ExcuseId = 4,
-					KeywordId = 4
-				}, new ExcuseKeyword
-				{
-					ExcuseId = 3,
-					KeywordId = 5
-				}, new ExcuseKeyword
-				{
-					ExcuseId = 4,
-					KeywordId = 5
-				}, new ExcuseKeyword
-				{
-					ExcuseId = 4,
-					KeywordId = 6
-				}, new ExcuseKeyword
-				{
-					ExcuseId = 5,
-					KeywordId = 6
-				}, new ExcuseKeyword
-				{
-					ExcuseId = 5,
-					KeywordId = 7
-				}, new ExcuseKeyword
-				{
-					ExcuseId = 6,
-					KeywordId = 7
-				},
-
-                //New Addition: 7,8
-                new ExcuseKeyword
-                {
-                    ExcuseId = 7,
-                    KeywordId = 8
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 7,
-                    KeywordId = 9
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 7,
-                    KeywordId = 2
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 8,
-                    KeywordId = 8
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 8,
-                    KeywordId = 9
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 8,
-                    KeywordId = 2
-                },
-                //New Addition: 9,10
-                new ExcuseKeyword
-                {
-                    ExcuseId = 9,
-                    KeywordId = 3
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 9,
-                    KeywordId = 10
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 9,
-                    KeywordId = 11
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 10,
-                    KeywordId = 3
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 10,
-                    KeywordId = 10
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 10,
-                    KeywordId = 11
-                },
-                //New Addition: 11,12
-                new ExcuseKeyword
-                {
-                    ExcuseId = 11,
-                    KeywordId = 10
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 11,
-                    KeywordId = 12
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 11,
-                    KeywordId = 3
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 12,
-                    KeywordId = 10
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 12,
-                    KeywordId = 12
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 12,
-                    KeywordId = 3
-                },
-                //New Addition: 13,14
-                new ExcuseKeyword
-                {
-                    ExcuseId = 13,
-                    KeywordId = 10
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 13,
-                    KeywordId = 13
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 13,
-                    KeywordId = 14
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 14,
-                    KeywordId = 10
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 14,
-                    KeywordId = 13
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 14,
-                    KeywordId = 14
-                },
-                //New Addition: 15,16
-                new ExcuseKeyword
-                {
-                    ExcuseId = 15,
-                    KeywordId = 10
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 15,
-                    KeywordId = 3
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 15,
-                    KeywordId = 15
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 16,
-                    KeywordId = 10
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 16,
-                    KeywordId = 3
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 16,
-                    KeywordId = 15
-                },
-                //New Addition: 17,18
-                new ExcuseKeyword
-                {
-                    ExcuseId = 17,
-                    KeywordId = 3
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 17,
-                    KeywordId = 15
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 17,
-                    KeywordId = 10
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 18,
-                    KeywordId = 3
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 18,
-                    KeywordId = 15
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 18,
-                    KeywordId = 10
-                },
-                //New Addition: 19,20
-                new ExcuseKeyword
-                {
-                    ExcuseId = 19,
-                    KeywordId = 16
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 19,
-                    KeywordId = 17
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 19,
-                    KeywordId = 18
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 20,
-                    KeywordId = 16
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 20,
-                    KeywordId = 17
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 20,
-                    KeywordId = 18
-                },
-                //New Addition: 21,22
-                new ExcuseKeyword
-                {
-                    ExcuseId = 21,
-                    KeywordId = 19
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 21,
-                    KeywordId = 20
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 21,
-                    KeywordId = 16
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 22,
-                    KeywordId = 19
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 22,
-                    KeywordId = 20
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 22,
-                    KeywordId = 16
-                },
-                //New Addition: 23,24
-                new ExcuseKeyword
-                {
-                    ExcuseId = 23,
-                    KeywordId = 21
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 23,
-                    KeywordId = 22
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 23,
-                    KeywordId = 17
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 24,
-                    KeywordId = 21
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 24,
-                    KeywordId = 22
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 24,
-                    KeywordId = 17
-                },
-                //New Addition: 25,26
-                new ExcuseKeyword
-                {
-                    ExcuseId = 25,
-                    KeywordId = 12
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 25,
-                    KeywordId = 23
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 25,
-                    KeywordId = 24
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 26,
-                    KeywordId = 12
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 26,
-                    KeywordId = 23
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 26,
-                    KeywordId = 24
-                },
-                //New Addition: 27,28
-                new ExcuseKeyword
-                {
-                    ExcuseId = 27,
-                    KeywordId = 25
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 27,
-                    KeywordId = 26
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 27,
-                    KeywordId = 7
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 28,
-                    KeywordId = 25
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 28,
-                    KeywordId = 26
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 28,
-                    KeywordId = 7
-                },
-                //New Addition: 29,30
-                new ExcuseKeyword
-                {
-                    ExcuseId = 29,
-                    KeywordId = 27
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 29,
-                    KeywordId = 28
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 29,
-                    KeywordId = 7
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 30,
-                    KeywordId = 27
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 30,
-                    KeywordId = 28
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 30,
-                    KeywordId = 7
-                },
-                //New Addition: 31,32
-                new ExcuseKeyword
-                {
-                    ExcuseId = 31,
-                    KeywordId = 3
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 31,
-                    KeywordId = 29
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 31,
-                    KeywordId = 30
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 32,
-                    KeywordId = 3
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 32,
-                    KeywordId = 29
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 32,
-                    KeywordId = 30
-                },
-                //New Addition: 33,34
-                new ExcuseKeyword
-                {
-                    ExcuseId = 33,
-                    KeywordId = 3
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 33,
-                    KeywordId = 10
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 33,
-                    KeywordId = 31
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 34,
-                    KeywordId = 10
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 34,
-                    KeywordId = 3
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 34,
-                    KeywordId = 31
-                },
-                //New Addition: 35,36
-                new ExcuseKeyword
-                {
-                    ExcuseId = 35,
-                    KeywordId = 33
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 35,
-                    KeywordId = 32
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 35,
-                    KeywordId = 34
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 36,
-                    KeywordId = 32
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 36,
-                    KeywordId = 33
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 36,
-                    KeywordId = 34
-                },
-                //New Addition: 37, 38
-                new ExcuseKeyword
-                {
-                    ExcuseId = 37,
-                    KeywordId = 17
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 37,
-                    KeywordId = 30
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 37,
-                    KeywordId = 23
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 38,
-                    KeywordId = 17
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 38,
-                    KeywordId = 30
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 38,
-                    KeywordId = 23
-                },
-                //New Addition: 39,40
-                new ExcuseKeyword
-                {
-                    ExcuseId = 39,
-                    KeywordId = 7
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 39,
-                    KeywordId = 34
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 39,
-                    KeywordId = 31
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 40,
-                    KeywordId = 7
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 40,
-                    KeywordId = 34
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 40,
-                    KeywordId = 31
-                },
-                //New Addition: 41,42
-                new ExcuseKeyword
-                {
-                    ExcuseId = 41,
-                    KeywordId = 22
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 41,
-                    KeywordId = 17
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 41,
-                    KeywordId = 5
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 42,
-                    KeywordId = 22
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 42,
-                    KeywordId = 17
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 42,
-                    KeywordId = 5
-                },
-                //New Addition: 43,44
-                new ExcuseKeyword
-                {
-                    ExcuseId = 43,
-                    KeywordId = 7
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 43,
-                    KeywordId = 17
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 43,
-                    KeywordId = 18
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 44,
-                    KeywordId = 7
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 44,
-                    KeywordId = 17
-                }, new ExcuseKeyword
-                {
-                    ExcuseId = 44,
-                    KeywordId = 18
-                });
-
+	
 
 			modelBuilder.Entity<Keyword>().HasData(
 				new Keyword
@@ -1008,6 +439,577 @@ namespace WebApplication1.DbContext
                     Tone = Tone.Polite,
                     SubcategoryId = 6
                 });
+
+			modelBuilder.Entity<ExcuseKeyword>().HasData(
+				new ExcuseKeyword
+				{
+					ExcuseId = 1,
+					KeywordId = 1
+				}, new ExcuseKeyword
+				{
+					ExcuseId = 2,
+					KeywordId = 1
+				}, new ExcuseKeyword
+				{
+					ExcuseId = 1,
+					KeywordId = 2
+				}, new ExcuseKeyword
+				{
+					ExcuseId = 2,
+					KeywordId = 2
+				}, new ExcuseKeyword
+				{
+					ExcuseId = 3,
+					KeywordId = 2
+				}, new ExcuseKeyword
+				{
+					ExcuseId = 4,
+					KeywordId = 2
+				}, new ExcuseKeyword
+				{
+					ExcuseId = 5,
+					KeywordId = 2
+				}, new ExcuseKeyword
+				{
+					ExcuseId = 6,
+					KeywordId = 2
+				}, new ExcuseKeyword
+				{
+					ExcuseId = 1,
+					KeywordId = 3
+				}, new ExcuseKeyword
+				{
+					ExcuseId = 2,
+					KeywordId = 3
+				}, new ExcuseKeyword
+				{
+					ExcuseId = 3,
+					KeywordId = 4
+				}, new ExcuseKeyword
+				{
+					ExcuseId = 4,
+					KeywordId = 4
+				}, new ExcuseKeyword
+				{
+					ExcuseId = 3,
+					KeywordId = 5
+				}, new ExcuseKeyword
+				{
+					ExcuseId = 4,
+					KeywordId = 5
+				}, new ExcuseKeyword
+				{
+					ExcuseId = 4,
+					KeywordId = 6
+				}, new ExcuseKeyword
+				{
+					ExcuseId = 5,
+					KeywordId = 6
+				}, new ExcuseKeyword
+				{
+					ExcuseId = 5,
+					KeywordId = 7
+				}, new ExcuseKeyword
+				{
+					ExcuseId = 6,
+					KeywordId = 7
+				},
+
+						 //New Addition: 7,8
+						 new ExcuseKeyword
+						 {
+							 ExcuseId = 7,
+							 KeywordId = 8
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 7,
+							 KeywordId = 9
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 7,
+							 KeywordId = 2
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 8,
+							 KeywordId = 8
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 8,
+							 KeywordId = 9
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 8,
+							 KeywordId = 2
+						 },
+						 //New Addition: 9,10
+						 new ExcuseKeyword
+						 {
+							 ExcuseId = 9,
+							 KeywordId = 3
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 9,
+							 KeywordId = 10
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 9,
+							 KeywordId = 11
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 10,
+							 KeywordId = 3
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 10,
+							 KeywordId = 10
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 10,
+							 KeywordId = 11
+						 },
+						 //New Addition: 11,12
+						 new ExcuseKeyword
+						 {
+							 ExcuseId = 11,
+							 KeywordId = 10
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 11,
+							 KeywordId = 12
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 11,
+							 KeywordId = 3
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 12,
+							 KeywordId = 10
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 12,
+							 KeywordId = 12
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 12,
+							 KeywordId = 3
+						 },
+						 //New Addition: 13,14
+						 new ExcuseKeyword
+						 {
+							 ExcuseId = 13,
+							 KeywordId = 10
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 13,
+							 KeywordId = 13
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 13,
+							 KeywordId = 14
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 14,
+							 KeywordId = 10
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 14,
+							 KeywordId = 13
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 14,
+							 KeywordId = 14
+						 },
+						 //New Addition: 15,16
+						 new ExcuseKeyword
+						 {
+							 ExcuseId = 15,
+							 KeywordId = 10
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 15,
+							 KeywordId = 3
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 15,
+							 KeywordId = 15
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 16,
+							 KeywordId = 10
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 16,
+							 KeywordId = 3
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 16,
+							 KeywordId = 15
+						 },
+						 //New Addition: 17,18
+						 new ExcuseKeyword
+						 {
+							 ExcuseId = 17,
+							 KeywordId = 3
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 17,
+							 KeywordId = 15
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 17,
+							 KeywordId = 10
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 18,
+							 KeywordId = 3
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 18,
+							 KeywordId = 15
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 18,
+							 KeywordId = 10
+						 },
+						 //New Addition: 19,20
+						 new ExcuseKeyword
+						 {
+							 ExcuseId = 19,
+							 KeywordId = 16
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 19,
+							 KeywordId = 17
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 19,
+							 KeywordId = 18
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 20,
+							 KeywordId = 16
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 20,
+							 KeywordId = 17
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 20,
+							 KeywordId = 18
+						 },
+						 //New Addition: 21,22
+						 new ExcuseKeyword
+						 {
+							 ExcuseId = 21,
+							 KeywordId = 19
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 21,
+							 KeywordId = 20
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 21,
+							 KeywordId = 16
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 22,
+							 KeywordId = 19
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 22,
+							 KeywordId = 20
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 22,
+							 KeywordId = 16
+						 },
+						 //New Addition: 23,24
+						 new ExcuseKeyword
+						 {
+							 ExcuseId = 23,
+							 KeywordId = 21
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 23,
+							 KeywordId = 22
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 23,
+							 KeywordId = 17
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 24,
+							 KeywordId = 21
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 24,
+							 KeywordId = 22
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 24,
+							 KeywordId = 17
+						 },
+						 //New Addition: 25,26
+						 new ExcuseKeyword
+						 {
+							 ExcuseId = 25,
+							 KeywordId = 12
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 25,
+							 KeywordId = 23
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 25,
+							 KeywordId = 24
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 26,
+							 KeywordId = 12
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 26,
+							 KeywordId = 23
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 26,
+							 KeywordId = 24
+						 },
+						 //New Addition: 27,28
+						 new ExcuseKeyword
+						 {
+							 ExcuseId = 27,
+							 KeywordId = 25
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 27,
+							 KeywordId = 26
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 27,
+							 KeywordId = 7
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 28,
+							 KeywordId = 25
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 28,
+							 KeywordId = 26
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 28,
+							 KeywordId = 7
+						 },
+						 //New Addition: 29,30
+						 new ExcuseKeyword
+						 {
+							 ExcuseId = 29,
+							 KeywordId = 27
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 29,
+							 KeywordId = 28
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 29,
+							 KeywordId = 7
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 30,
+							 KeywordId = 27
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 30,
+							 KeywordId = 28
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 30,
+							 KeywordId = 7
+						 },
+						 //New Addition: 31,32
+						 new ExcuseKeyword
+						 {
+							 ExcuseId = 31,
+							 KeywordId = 3
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 31,
+							 KeywordId = 29
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 31,
+							 KeywordId = 30
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 32,
+							 KeywordId = 3
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 32,
+							 KeywordId = 29
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 32,
+							 KeywordId = 30
+						 },
+						 //New Addition: 33,34
+						 new ExcuseKeyword
+						 {
+							 ExcuseId = 33,
+							 KeywordId = 3
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 33,
+							 KeywordId = 10
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 33,
+							 KeywordId = 31
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 34,
+							 KeywordId = 10
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 34,
+							 KeywordId = 3
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 34,
+							 KeywordId = 31
+						 },
+						 //New Addition: 35,36
+						 new ExcuseKeyword
+						 {
+							 ExcuseId = 35,
+							 KeywordId = 33
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 35,
+							 KeywordId = 32
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 35,
+							 KeywordId = 34
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 36,
+							 KeywordId = 32
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 36,
+							 KeywordId = 33
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 36,
+							 KeywordId = 34
+						 },
+						 //New Addition: 37, 38
+						 new ExcuseKeyword
+						 {
+							 ExcuseId = 37,
+							 KeywordId = 17
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 37,
+							 KeywordId = 30
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 37,
+							 KeywordId = 23
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 38,
+							 KeywordId = 17
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 38,
+							 KeywordId = 30
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 38,
+							 KeywordId = 23
+						 },
+						 //New Addition: 39,40
+						 new ExcuseKeyword
+						 {
+							 ExcuseId = 39,
+							 KeywordId = 7
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 39,
+							 KeywordId = 34
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 39,
+							 KeywordId = 31
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 40,
+							 KeywordId = 7
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 40,
+							 KeywordId = 34
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 40,
+							 KeywordId = 31
+						 },
+						 //New Addition: 41,42
+						 new ExcuseKeyword
+						 {
+							 ExcuseId = 41,
+							 KeywordId = 22
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 41,
+							 KeywordId = 17
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 41,
+							 KeywordId = 5
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 42,
+							 KeywordId = 22
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 42,
+							 KeywordId = 17
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 42,
+							 KeywordId = 5
+						 },
+						 //New Addition: 43,44
+						 new ExcuseKeyword
+						 {
+							 ExcuseId = 43,
+							 KeywordId = 7
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 43,
+							 KeywordId = 17
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 43,
+							 KeywordId = 18
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 44,
+							 KeywordId = 7
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 44,
+							 KeywordId = 17
+						 }, new ExcuseKeyword
+						 {
+							 ExcuseId = 44,
+							 KeywordId = 18
+						 });
+
 		}
 	}
 }

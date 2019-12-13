@@ -21,7 +21,7 @@ namespace WebApplication1
 			services.AddScoped<IStorageService, StorageService>();
 			services.AddScoped<ExcuserContex>();
 			services.AddDbContext<ExcuserContex>(options =>
-				options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=ExcuserContext;Trusted_Connection=True;MultipleActiveResultSets=true"));
+				options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=NewDb22;Trusted_Connection=True;MultipleActiveResultSets=true"));
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
