@@ -250,7 +250,8 @@ function GenerateAnotherExcuse(Id) {
             const doc = parser.parseFromString(html, "text/html");
             const pageMain = document.querySelector("main");
             const returnedMain = doc.querySelector("main");
-            pageMain.innerHTML = returnedMain.innerHTML; 
+            pageMain.innerHTML = returnedMain.innerHTML;
+            start();
              
     });
 }
